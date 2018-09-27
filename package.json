@@ -1,0 +1,26 @@
+{
+  "name": "gamebuino-cli",
+  "version": "0.1.0",
+  "description": "Command line interface for common Gamebuino development tasks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "gamebuino-cli": "./index.js"
+  },
+  "keywords": [
+    "Gamebuino"
+  ],
+  "author": "Andy O'Neill <aoneill01@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aoneill01/gamebuino-cli.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^7.0.0",
+    "handlebars": "^4.0.12",
+    "inquirer": "^6.2.0"
+  }
+}
