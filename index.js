@@ -21,7 +21,7 @@ prompt(questions)
 function generateProject(answers) {
     writeTemplate('sketch.ino', answers.projectName, `${answers.projectName}.ino`, answers);
     writeTemplate('README.md', '.', 'README.md', answers);
-    writeTemplate('.gitignore', '.', '.gitignore', answers);
+    writeTemplate('gitignore', '.', '.gitignore', answers);
     fs.ensureDirSync(path.join('assets'));
     fs.ensureDirSync(path.join('binaries', answers.projectName));
 }
