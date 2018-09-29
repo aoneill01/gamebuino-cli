@@ -16,10 +16,11 @@ function emulator(binFile) {
         res.sendFile(gameFile);
     });
 
-    app.use(express.static(path.join('node_modules', '@aoneill01', 'gamebuino-emulator', 'dist')));
+    app.use(express.static(path.join(__dirname, 'node_modules', '@aoneill01', 'gamebuino-emulator', 'dist')));
     
     app.listen(port, () => {
         console.log(chalk.green(`Emulator running at http://localhost:${port}`));
+        console.log('Ctrl+C to quit');
     });
 }
 
