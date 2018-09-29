@@ -25,6 +25,7 @@
     "express": "^4.16.3",
     "fs-extra": "^7.0.0",
     "handlebars": "^4.0.12",
-    "inquirer": "^6.2.0"
+    "inquirer": "^6.2.0",
+    "opn": "^5.4.0"
   }
 }

@@ -1,8 +1,7 @@
 const express = require('express');
 const path = require('path');
 const chalk = require('chalk');
-
-const port = 3000;
+const opn = require('opn');
 
 function emulator(binFile) {
     const gameFile = path.resolve(process.cwd(), binFile);    
@@ -18,9 +17,11 @@ function emulator(binFile) {
 
     app.use(express.static(path.join(__dirname, 'node_modules', '@aoneill01', 'gamebuino-emulator', 'dist')));
     
-    app.listen(port, () => {
-        console.log(chalk.green(`Emulator running at http://localhost:${port}`));
+    let server = app.listen(0, () => {
+        const url = `http://localhost:${server.address().port}`;
+        console.log(chalk.green(`Emulator running at ${url}`));
         console.log('Ctrl+C to quit');
+        opn(url);
     });
 }
 
