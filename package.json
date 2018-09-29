@@ -1,6 +1,6 @@
 {
   "name": "gamebuino-cli",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Command line interface for common Gamebuino development tasks.",
   "main": "index.js",
   "scripts": {
